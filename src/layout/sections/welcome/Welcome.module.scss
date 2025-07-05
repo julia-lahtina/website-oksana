@@ -1,0 +1,18 @@
+.name {
+    background: linear-gradient(270deg, #ee6bd4 10%, #4c5fdf 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mainImage {
+    width: 280px;
+    height: 370px;
+    object-fit: contain;
+}
+
+.text {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #5b565e;
+}

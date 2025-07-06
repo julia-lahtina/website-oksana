@@ -1,5 +1,26 @@
+.sectionGermaForMe {
+  //padding: 30px;
+}
+
+.sectionLabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
 .image {
-    width: 470px;
-    height: 470px;
-    object-fit: cover;
+  width: 410px;
+  height: 10px;
+}
+
+.germanForMe {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: justify;
+  font-size: 1.2rem;
+  background-color: #fef4f9;
+  padding: 30px;
 }

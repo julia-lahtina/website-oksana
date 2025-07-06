@@ -1,60 +1,60 @@
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99999;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f8f0fedc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f0fedc;
 }
 
 img {
-    width: 70px;
-    height: 70px;
+  width: 70px;
+  height: 70px;
 }
 
 .menuItem {
-    font-size: 1rem;
-    color: #28263d;
-    font-weight: bold;
+  font-size: 1rem;
+  color: #28263d;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  img {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    margin: auto;
+  }
 
-    img {
-        display: flex;
-        margin: auto;
-    }
-
-    &:hover p{
-        color: #969fdb    ;
-    }
+  &:hover p {
+    color: #969fdb;
+  }
 }
 
 .navContactButton {
-    padding: 14px 32px;
-    border-radius: 50px;
-    background-color: #969fdb;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: 0.5s;
-    font-size: 1rem;
-    color: #ffff;
-    font-weight: bold;
-    cursor: pointer;
-    &:hover {
-        transform: scale(1.05);
-    }
+  padding: 14px 32px;
+  border-radius: 50px;
+  background-color: #969fdb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  font-size: 1rem;
+  color: #ffff;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .underline {
-    width: 60px;
-    height: 10px;
+  width: 60px;
+  height: 10px;
 }
 
 .anchorLink {
-    text-decoration: none;
-    color: #ffff;
+  text-decoration: none;
+  color: #ffff;
 }

@@ -1,4 +1,4 @@
-.sectionAboutMe {
+.sectionWhyMe {
   padding: 30px;
 }
 
@@ -15,19 +15,28 @@
   height: 10px;
 }
 
-.aboutMe {
+.whyMe {
+  //display: flex;
+  //gap: 30px;
+  font-size: 1.2rem;
+}
+
+.whyMe div {
   display: flex;
   flex-direction: column;
   gap: 15px;
   text-align: justify;
-  font-size: 1.2rem;
 }
 
-.aboutMe h3,
+.sectionLabel h3,
 p {
   color: #5b565e;
 }
 
-.aboutMe h3 {
-  margin-bottom: 15px;
+.whyMe img {
+  float: left;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-right: 30px;
 }

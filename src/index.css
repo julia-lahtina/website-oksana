@@ -36,6 +36,8 @@ button {
 section {
   padding: 100px 0;
   background-color: #fffafe;
+  outline: 1px solid blue;
+  scroll-margin-top: 100px;
 }
 
 h1 {
@@ -51,6 +53,7 @@ p {
 }
 
 .main-container {
+  outline: 1px solid red;
   max-width: 1170px;
   width: 100%;
   min-height: 100%;

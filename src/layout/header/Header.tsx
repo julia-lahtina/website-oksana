@@ -43,7 +43,7 @@ export const Header = () => {
           <AnchorLink
             key={item.text}
             className={style.anchorLink}
-            offset={50}
+            offset={90}
             href={`#${item.link}`}
           >
             <li className={style.menuItem}>

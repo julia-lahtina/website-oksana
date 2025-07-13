@@ -4,6 +4,8 @@ import style from './Contact.module.scss';
 import line from '../../../assets/images/line2.svg';
 import locationIcon from '../../../assets/images/location_icon.svg';
 import emailIcon from '../../../assets/images/mail_icon.svg';
+import { motion } from 'framer-motion';
+import { img } from 'framer-motion/client';
 
 export const Contact = () => {
 
@@ -33,34 +35,45 @@ export const Contact = () => {
 
   return (
     <Container>
-      <section id='contact' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <span className={style.sectionLabel}>
-          <h3 style={{ color: '#5b565e', fontWeight: '800', fontSize: '1.5rem' }}>Kontakt</h3>
-          <img className={style.image} src={line} alt='underline' />
-        </span>
+      <section id='contact' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '80px 30px 30px 30px', backgroundColor: '#f8f0fe' }}>
 
-        <div style={{ display: 'flex' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', padding: '20px' }}>
-            <span className={style.text}>LASSEN SIE UNS SPRECHEN</span>
-            <span className={style.text2}>Möchten Sie mit mir Deutsch lernen oder brauchen Sie eine Sprachdozentin für Ihre Schule?</span>
-            <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '30px' }}>
-              <img src={emailIcon} alt="email-icon" style={{ width: '30px', height: '30px' }} /> <span className={style.infoText}>oksana.khegai@icloud.com</span>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className={style.sectionLabel}>
+            <h3 style={{ color: '#5b565e', fontWeight: '800', fontSize: '1.5rem' }}>Kontakt</h3>
+            <img className={style.image} src={line} alt='underline' />
+          </span>
+
+          <div style={{ display: 'flex' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', padding: '20px' }}>
+              <span className={style.text}>LASSEN SIE UNS SPRECHEN</span>
+              <span className={style.text2}>Möchten Sie mit mir Deutsch lernen oder brauchen Sie eine Sprachdozentin für Ihre Schule?</span>
+              <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '30px' }}>
+                <img src={emailIcon} alt="email-icon" style={{ width: '30px', height: '30px' }} /> <span className={style.infoText}>oksana.khegai@icloud.com</span>
+              </div>
+              <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '20px' }}>
+                <img src={locationIcon} alt="locationIcon" style={{ width: '30px', height: '30px' }} /> <span className={style.infoText}>Dresden, Deutschland</span>
+              </div>
             </div>
-            <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '20px' }}>
-              <img src={locationIcon} alt="locationIcon" style={{ width: '30px', height: '30px' }} /> <span className={style.infoText}>Dresden, Deutschland</span>
-            </div>
+
+            <form onSubmit={onSubmit} className={style.contactForm}>
+              <label htmlFor="name">Name</label>
+              <input type="text" placeholder='Geben Sie bitte Ihren Vor- und Nachnamen ein...' name='name' />
+              <label htmlFor="email">E-Mail</label>
+              <input type="email" placeholder='E-Mail' name='email' />
+              <label htmlFor="message">Nachricht</label>
+              <textarea name='message' rows={10} placeholder='Wie kann ich helfen?' />
+              <div style={{ textAlign: 'center' }}>
+                <button type='submit' className={style.button}>Lassen Sie uns ins Gespräch kommen</button>
+              </div>
+            </form>
           </div>
+        </motion.div>
 
-          <form onSubmit={onSubmit} className={style.contactForm}>
-            <label htmlFor="name">Name</label>
-            <input type="text" placeholder='Geben Sie bitte Ihren Vor- und Nachnamen ein...' name='name' />
-            <label htmlFor="email">E-Mail</label>
-            <input type="email" placeholder='E-Mail' name='email' />
-            <label htmlFor="message">Nachricht</label>
-            <textarea name='message' rows={10} placeholder='Schreiben Sie mir eine Nachricht...' />
-            <button type='submit' className={style.button}>Lassen Sie uns ins Gespräch kommen</button>
-          </form>
-        </div>
 
       </section>
     </Container>

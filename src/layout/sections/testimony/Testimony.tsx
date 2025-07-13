@@ -3,6 +3,7 @@ import { Container } from '../../../components/Container';
 import line from '../../../assets/images/white-line.svg';
 import style from './Testimony.module.scss';
 import Slider from 'react-slick';
+import { motion } from 'framer-motion';
 
 export const Testimony = () => {
 
@@ -84,30 +85,38 @@ export const Testimony = () => {
 
   return (
     <Container>
-      <section id='testimony' style={{ backgroundColor: '#a6afde', padding: '30px' }}>
-        <div >
-          <span className={style.sectionLabel}>
-            <h3 style={{ color: '#ffff', fontWeight: '800', fontSize: '1.5rem' }}>Meinungen meiner Schüler:innen</h3>
-            <img className={style.image} src={line} alt='underline' />
-          </span>
-          <div style={{ color: '#ffff', fontWeight: '700', fontSize: '1.2rem', textAlign: 'center', marginBottom: '20px' }}>Das macht den Unterschied.</div>
+      <section id='testimony' style={{ backgroundColor: '#a6afde', padding: '80px 30px 30px 30px' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div >
+            <span className={style.sectionLabel}>
+              <h3 style={{ color: '#ffff', fontWeight: '800', fontSize: '1.5rem' }}>Meinungen meiner Schüler:innen</h3>
+              <img className={style.image} src={line} alt='underline' />
+            </span>
+            <div style={{ color: '#ffff', fontWeight: '700', fontSize: '1.3rem', textAlign: 'center', marginBottom: '20px' }}>Das macht den Unterschied.</div>
 
-          <Slider {...settings}>
-            {
-              testimonialData.map(item => {
-                return (
-                  <div key={item.id}>
-                    <div className={style.testimonyCard}>
-                      <span>⭐⭐⭐⭐⭐</span>
-                      <p>{item.text}</p>
-                      <span>{item.name}</span>
+            <Slider {...settings}>
+              {
+                testimonialData.map(item => {
+                  return (
+                    <div key={item.id}>
+                      <div className={style.testimonyCard}>
+                        <span>⭐⭐⭐⭐⭐</span>
+                        <p>{item.text}</p>
+                        <span>{item.name}</span>
+                      </div>
                     </div>
-                  </div>
-                )
-              })
-            }
-          </Slider>
-        </div>
+                  )
+                })
+              }
+            </Slider>
+          </div>
+        </motion.div>
+
       </section>
     </Container>
   )

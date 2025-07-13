@@ -1,11 +1,12 @@
 .welcomeSection {
-  margin-top: 5%;
+  margin-top: 10%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #fffafe;
+  //background-color: #fffafe;
+  background-color: #f8f0fe;
   flex-wrap: wrap;
-  padding: 250px 0;
+  padding: 80px 30px 30px 30px;
 }
 
 .textBlock {
@@ -17,6 +18,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 3rem;
 }
 
 .mainImage {
@@ -49,4 +51,8 @@
   &:hover {
     transform: scale(1.05);
   }
+}
+
+.info {
+  font-size: 1.1rem;
 }
